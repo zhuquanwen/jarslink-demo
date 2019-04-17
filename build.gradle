@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.iscas'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    maven { url "http://192.168.100.88:8081/repository/maven-public/" }
+    maven {url "http://maven.aliyun.com/nexus/content/groups/public"}
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+
+    compile 'com.alipay.jarslink:jarslink-api:1.5.0.20180213'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'commons-collections:commons-collections:3.2.1'
+    compile 'com.google.guava:guava:17.0'
+    compile 'com.iscas:base:2.0-RELEASE'
+    compile 'com.iscas:demo:2.9-RELEASE'
+
+}
